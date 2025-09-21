@@ -211,6 +211,7 @@ p {
   </header>
 
   
+  
 
  <!-- BANNER --> 
 <section class="banner" id="home"> 
@@ -222,6 +223,50 @@ p {
     </div>
   </div>
 </section>
+
+
+
+<style>
+/* ESTILO PADRÃO (DESKTOP) */
+.botoes-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 2px solid #FFD700; /* cor amarela */
+  border-radius: 5px;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #FFD700;
+  color: #000;
+}
+
+/* ESTILO SOMENTE PARA MOBILE */
+@media (max-width: 768px) {
+  .botoes-container {
+    flex-direction: column; /* coloca em coluna */
+    align-items: center; /* centraliza */
+  }
+
+  .btn {
+    min-width: 250px; /* largura igual para ambos */
+  }
+}
+</style>
+
 
   <!-- SOBRE --> 
 <section id="sobre" class="pb-0">
