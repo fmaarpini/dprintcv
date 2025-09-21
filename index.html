@@ -66,13 +66,12 @@
   margin-bottom: 40px;
 }
 
-.banner-buttons {
-  display: flex;
-  gap: 30px;
-  justify-content: flex-start; ;      /* centraliza os botões horizontalmente */
-  margin-top: 20px;             /* espaço entre título e botões */
-  flex-wrap: wrap; /* se precisar quebrar em telas médias */
-}
+ .banner-buttons {
+        display: flex;
+        gap: 30px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
 
 .banner-buttons a {
   display: inline-block;
@@ -180,6 +179,24 @@ p {
         background-color: #1ebe5a;
         transform: scale(1.1);
       }
+
+       /* BOTÕES MOBILE */
+      @media (max-width: 768px) {
+        .banner {
+          height: 400px;
+          padding-left: 20px;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+        }
+        .banner h1 {font-size: 36px; line-height: 1.3;}
+        .banner-buttons {flex-direction: column; gap: 30px; align-items: center;}
+        .banner-buttons a {width: 80%; max-width: 300px; text-align: center;}
+      }
+
+      @media (max-width: 576px) {
+        .services {grid-template-columns: 1fr; gap: 30px;}
+      }
    </style>
 </head>
 <body>
@@ -253,23 +270,6 @@ p {
   color: #000;
 }
 
- 
-/* BOTÕES - MOBILE */
-@media (max-width: 768px) {
-  .banner-buttons {
-    flex-direction: column;   /* empilha os botões */
-    align-items: center;      /* centraliza */
-    gap: 15px;
-  }
-
-  .banner-buttons a {
-    width: 80%;              /* ocupa 80% da tela */
-    max-width: 300px;        /* não ultrapassa 300px */
-    text-align: center;
-  }
-}
-
-    
 </style>
 
 
@@ -631,7 +631,7 @@ p {
 
   .banner-buttons {
     flex-direction: column; /* botões em coluna */
-    gap: 15px;
+    gap: 20px;
     margin-top: 25px;
   }
 
@@ -639,6 +639,7 @@ p {
     width: 100%;
     max-width: 250px;
     text-align: center;
+    margin-bottom: 10px; /* extra, se quiser ainda mais espaço */
   }
 }
 
